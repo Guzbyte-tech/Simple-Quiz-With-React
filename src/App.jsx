@@ -20,7 +20,7 @@ const App = () => {
   };
 
   const prevQuestion = () => {
-    if (questionIndex < questions.length - 1) {
+    if (questionIndex <= questions.length - 1) {
       setQuestionIndex(() => questionIndex - 1);
     } else {
       setShowFinalScore(true);
@@ -51,6 +51,7 @@ const App = () => {
               selectedOption={answers[questionIndex]}
               totalQuestions={questions.length}
               currentQuestion={questionIndex}
+              
             />
 
             <Navigation
