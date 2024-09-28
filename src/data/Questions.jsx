@@ -1,0 +1,78 @@
+export const questions = [
+    {
+      questionId: 1,
+      question: "What is the capital of Japan?",
+      options: ["Tokyo", "Beijing", "Seoul", "Bangkok"],
+      correctAnswer: "Tokyo",
+      points: 5,
+    },
+    {
+      questionId: 2,
+      question: "Which planet is known as the Red Planet?",
+      options: ["Mars", "Venus", "Jupiter", "Saturn"],
+      correctAnswer: "Mars",
+      points: 5,
+    },
+    {
+      questionId: 3,
+      question: "Who wrote 'To Kill a Mockingbird'?",
+      options: ["Harper Lee", "Jane Austen", "Mark Twain", "Ernest Hemingway"],
+      correctAnswer: "Harper Lee",
+      points: 5,
+    },
+    {
+      questionId: 4,
+      question: "What is the largest mammal in the world?",
+      options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+      correctAnswer: "Blue Whale",
+      points: 5,
+    },
+    {
+      questionId: 5,
+      question: "Which element has the chemical symbol 'O'?",
+      options: ["Oxygen", "Gold", "Osmium", "Oganesson"],
+      correctAnswer: "Oxygen",
+      points: 5,
+    },
+    // {
+    //   questionId: 6,
+    //   question: "What is the currency of the United Kingdom?",
+    //   options: ["Pound Sterling", "Euro", "Dollar", "Yen"],
+    //   correctAnswer: "Pound Sterling",
+    //   points: 5,
+    // },
+    // {
+    //   questionId: 7,
+    //   question: "In which year did the Titanic sink?",
+    //   options: ["1912", "1905", "1920", "1918"],
+    //   correctAnswer: "1912",
+    //   points: 5,
+    // },
+    // {
+    //   questionId: 8,
+    //   question: "What is the smallest prime number?",
+    //   options: ["2", "1", "3", "5"],
+    //   correctAnswer: "2",
+    //   points: 5,
+    // },
+    // {
+    //   questionId: 9,
+    //   question: "Who painted the Mona Lisa?",
+    //   options: [
+    //     "Leonardo da Vinci",
+    //     "Vincent van Gogh",
+    //     "Pablo Picasso",
+    //     "Claude Monet",
+    //   ],
+    //   correctAnswer: "Leonardo da Vinci",
+    //   points: 5,
+    // },
+    // {
+    //   questionId: 10,
+    //   question: "Which is the longest river in the world?",
+    //   options: ["Nile", "Amazon", "Yangtze", "Mississippi"],
+    //   correctAnswer: "Nile",
+    //   points: 5,
+    // },
+  ];
+
