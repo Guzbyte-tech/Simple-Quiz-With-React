@@ -34,6 +34,12 @@ const App = () => {
     setAnswers(newAnswer);
   };
 
+  const handleRestart = () => {
+    setQuestionIndex(() => 0)
+    setShowFinalScore(() => false)
+    setAnswers(() => [])
+  }
+
   return (
     <>
       <div className="my-32">
@@ -42,7 +48,7 @@ const App = () => {
         </h1>
 
         {showFinalScore ? (
-          <Score questions={examQuestions} answers={answers} />
+          <Score questions={examQuestions} answers={answers} onRestart={handleRestart} />
         ) : (
           <div className="bg-white rounded-lg shadow-lg p-8 max-w-xl w-full mx-auto border">
             <Question

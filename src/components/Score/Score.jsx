@@ -1,6 +1,6 @@
 import AllQuestions from "../AllQuestions/AllQuestions";
 
-const Score = ({ questions, answers }) => {
+const Score = ({ questions, answers, onRestart }) => {
   const calculateScore = () => {
     let total = 0;
     answers.forEach((answer, index) => {
@@ -13,6 +13,10 @@ const Score = ({ questions, answers }) => {
 
   const totalEarnablePoints = () => {
     return questions.reduce((acc, question) => acc + question.points, 0);
+  };
+
+  const restartQuiz = () => {
+    onRestart();
   };
 
   return (
@@ -33,13 +37,13 @@ const Score = ({ questions, answers }) => {
       <AllQuestions questions={questions} answers={answers} />
 
       <div className="flex justify-center space-x-4">
-            <button
-              className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 mt-16"
-              onClick={() => window.location.reload()}
-            >
-              Re-take Quiz
-            </button>
-          </div>
+        <button
+          className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 mt-16"
+          onClick={() => restartQuiz()}
+        >
+          Re-take Quiz
+        </button>
+      </div>
     </div>
   );
 };
