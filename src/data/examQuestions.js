@@ -1,4 +1,4 @@
-export const questions = [
+export const examQuestions = [
     {
       questionId: 1,
       question: "What is the capital of Japan?",
@@ -75,4 +75,3 @@ export const questions = [
       points: 5,
     },
   ];
-

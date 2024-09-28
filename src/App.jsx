@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Navigation from "./components/Navigation/Navigation";
 import Question from "./components/Question/Question";
-import { questions } from "./data/questions";
+import { examQuestions } from "./data/examQuestions";
 import Score from "./components/Score/Score";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
   const [answers, setAnswers] = useState([]);
 
   const nextQuestion = () => {
-    if (questionIndex < questions.length - 1) {
+    if (questionIndex < examQuestions.length - 1) {
       setQuestionIndex(() => questionIndex + 1);
     } else {
       setShowFinalScore(true);
@@ -20,7 +20,7 @@ const App = () => {
   };
 
   const prevQuestion = () => {
-    if (questionIndex <= questions.length - 1) {
+    if (questionIndex <= examQuestions.length - 1) {
       setQuestionIndex(() => questionIndex - 1);
     } else {
       setShowFinalScore(true);
@@ -42,14 +42,14 @@ const App = () => {
         </h1>
 
         {showFinalScore ? (
-          <Score questions={questions} answers={answers} />
+          <Score questions={examQuestions} answers={answers} />
         ) : (
           <div className="bg-white rounded-lg shadow-lg p-8 max-w-xl w-full mx-auto border">
             <Question
-              question={questions[questionIndex]}
+              question={examQuestions[questionIndex]}
               handleAnswer={onAnswer}
               selectedOption={answers[questionIndex]}
-              totalQuestions={questions.length}
+              totalQuestions={examQuestions.length}
               currentQuestion={questionIndex}
               
             />
@@ -58,7 +58,7 @@ const App = () => {
               currentQuestion={questionIndex}
               nextQuestion={nextQuestion}
               prevQuestion={prevQuestion}
-              totalQuestions={questions.length}
+              totalQuestions={examQuestions.length}
             />
           </div>
         )}
