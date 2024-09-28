@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import Navigation from "./components/Navigation/Navigation";
-import Question from "./components/Question/question";
+import Question from "./components/Question/Question";
 import { questions } from "./data/questions";
 import Score from "./components/Score/Score";
 
